@@ -1,0 +1,26 @@
+Narbonne Online Film Festival - Format Compliance Report
+Generated: 2026-10-09T22:12:15
+
+Target spec:
+- container: mp4
+- video codec: h.265 (ffprobe: hevc)
+- audio codec: aac
+- frame rate: 25 FPS
+- aspect ratio: 16:9
+- resolution: 640 x 360
+- video bit rate: 2–5 Mb/s
+- audio bit rate: up to 256 kb/s
+- audio channels: stereo (2 ch)
+
+Results:
+
+Cosmos_War_of_the_Planets.mp4 -> NOT OK | problematic_fields: video_codec, frame_rate, aspect_ratio, resolution, audio_bit_rate
+  observed: container=mp4 | vcodec=h264 | acodec=aac | fps=29.97002997002997 | res=628x354 | 16:9=False | v_mbps=2.989377 | a_kbps=317.103 | ch=2
+Last_man_on_earth_1964.mov -> NOT OK | problematic_fields: video_codec, audio_codec, frame_rate, video_bit_rate, audio_bit_rate
+  observed: container=mp4 | vcodec=prores | acodec=pcm_s16le | fps=23.976023976023978 | res=640x360 | 16:9=True | v_mbps=9.285191 | a_kbps=1536.0 | ch=2
+The_Gun_and_the_Pulpit.avi -> NOT OK | problematic_fields: container, video_codec, audio_codec, resolution, video_bit_rate, audio_bit_rate
+  observed: container=avi | vcodec=rawvideo | acodec=pcm_s16le | fps=25.0 | res=720x404 | 16:9=True | v_mbps=87.438878 | a_kbps=1536.0 | ch=2
+The_Hill_Gang_Rides_Again.mp4 -> NOT OK | problematic_fields: video_codec, video_bit_rate
+  observed: container=mp4 | vcodec=h264 | acodec=aac | fps=25.0 | res=640x360 | 16:9=True | v_mbps=7.53773 | a_kbps=253.272 | ch=2
+Voyage_to_the_Planet_of_Prehistoric_Women.mp4 -> NOT OK | problematic_fields: audio_codec, frame_rate, video_bit_rate, audio_bit_rate
+  observed: container=mp4 | vcodec=hevc | acodec=mp3 | fps=29.97002997002997 | res=640x360 | 16:9=True | v_mbps=8.038857 | a_kbps=320.0 | ch=2
